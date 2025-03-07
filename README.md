@@ -1,4 +1,3 @@
-```markdown
 # FOFA 企业资产扫描器
 
 一个基于 FOFA API 的企业资产搜索工具，用于快速发现和分析企业的互联网资产。
@@ -14,8 +13,8 @@
 
 ## 项目结构
 
- ```
-```
+
+```plaintext
 
 fofa_enterprise_scanner/
 ├── config.ini          # 配置文件
@@ -28,7 +27,7 @@ fofa_enterprise_scanner/
 ├── exporter.py   # 结果导出模块
 └── data_processor.py  # 数据处理模块
 
-```plaintext
+```
 
 ## 使用要求
 
@@ -41,7 +40,7 @@ fofa_enterprise_scanner/
 ```bash
 git clone https://github.com/yourusername/fofa_enterprise_scanner.git
 cd fofa_enterprise_scanner
- ```
+
 ```
 
 2. 安装依赖
