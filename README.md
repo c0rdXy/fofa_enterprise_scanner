@@ -49,12 +49,48 @@ cd fofa_enterprise_scanner
 4. 运行程序
 单个公司搜索：
 
+```bash
+python main.py -c "公司名称"
+ ```
+
 批量公司搜索：
+
+```bash
+python main.py -f company.txt
+ ```
 
 导出结果：
 
+```bash
+# 导出为TXT格式
+python main.py -f company.txt -o txt
+
+# 导出为Excel格式
+python main.py -f company.txt -o excel
+ ```
+
 ## 输出示例
 ### 控制台输出
+```plaintext
+==================================================
+正在搜索公司 'XX科技股份有限公司' 的相关资产...
+找到 50 条结果
+
+FOFA查询语句:
+(title="XX科技股份有限公司" || body="XX科技股份有限公司") && country="CN" && status_code="200"
+
+标题总数: 15
+独立IP数: 8
+结果: 符合条件，可能是目标公司的资产
+
+常见标题:
+1. XX科技股份有限公司 (出现 10 次)
+2. XX科技-登录系统 (出现 5 次)
+...
+==================================================
+
+```
+
 ### 导出文件
 - TXT文件：按公司分组，包含详细的资产信息
 - Excel文件：表格形式，便于筛选和分析
@@ -71,6 +107,7 @@ cd fofa_enterprise_scanner
    
    - 请遵守 FOFA 的 API 使用政策
    - 建议控制查询频率，避免触发限制
+
 ## 常见问题
 1. API 调用失败
    
